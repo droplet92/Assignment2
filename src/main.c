@@ -33,7 +33,7 @@ void filestat1(void)
 {
   const char* filename = "./text1";
 
-  if (stat(filename, stat1)) {
+  if (stat(filename, &stat1)) {
     puts("invalid filename");
   }
 }
@@ -43,7 +43,7 @@ void filestat2(void)
 {
   const char* filename = "./text2";
 
-  if (stat(filename, stat1)) {
+  if (stat(filename, &stat1)) {
     puts("invalid filename");
   }
 }
