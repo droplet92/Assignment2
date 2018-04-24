@@ -1,0 +1,21 @@
+//두 개의 파일 수정 시간 비교하는 함수 작성
+void timecmp(void)
+{
+
+	//hour 또는 min이 작을수록 빨리 만들어진 파일 
+	if (time1->tm_hour < time2->tm_hour)
+		printf("text1 is early");
+	else if (time1->tm_hour > time2->tm_hour)
+		printf("text2 is early");
+	else
+	{
+		if (time1->tm_min < time2->tm_min)
+			printf("text1 is early");
+		else if (time1->tm_min == time2->tm_min)
+			printf("same time");
+		else
+			printf("text2 is early");
+	}
+
+	printf("\n");
+}
