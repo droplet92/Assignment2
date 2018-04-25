@@ -38,5 +38,5 @@ same time
 ```
 
 ## 3.참고자료
-[stat(2) manpage](http://man7.org/linux/man-pages/man2/stat.2.html)
+[stat(2) manpage](http://man7.org/linux/man-pages/man2/stat.2.html)  
 [struct tm](http://www.cplusplus.com/reference/ctime/tm/)
