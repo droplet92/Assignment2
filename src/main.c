@@ -88,7 +88,7 @@ void datecmp(void)
 	puts("text2 is early");
 	break;
 	
-	case:result<0
+	case result<0:
 	puts("text1 is early");	
 	break;
 
@@ -100,7 +100,7 @@ void datecmp(void)
 		puts("text2 is early");
 		break;
 		
-		case:result<0
+		case result<0:
 		puts("text1 is early");	
 		break;
 	
@@ -123,7 +123,7 @@ void timecmp(void)
 	puts("text2 is early");
 	break;
 	
-	case:result<0
+	case result<0:
 	puts("text1 is early");	
 	break;
 
@@ -135,7 +135,7 @@ void timecmp(void)
 		puts("text2 is early");
 		break;
 		
-		case:result<0
+		case result<0:
 		puts("text1 is early");	
 		break;
 	
