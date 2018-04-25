@@ -77,9 +77,71 @@ void blockcmp(void)
 //두 개의 파일 수정 날짜를 비교하는 함수 작성
 void datecmp(void)
 {
+	
+	int result=0;
+
+	result=time1->tm_mon-time2->tm_mon;
+
+	switch(result)
+	{
+	case result>0:
+	puts("text2 is early");
+	break;
+	
+	case:result<0
+	puts("text1 is early");	
+	break;
+
+	default:
+	result=time1->tm_mday - time2->tm_mday;
+	switch(result)
+	{
+		case result>0:
+		puts("text2 is early");
+		break;
+		
+		case:result<0
+		puts("text1 is early");	
+		break;
+	
+		default:
+		puts("same time");
+		break;
+	}
 }
 
 //두 개의 파일 수정 시간을 비교하는 함수 작성
 void timecmp(void)
 {
+	int result=0;
+
+	result=time1->tm_hour-time2->tm_hour;
+
+	switch(result)
+	{
+	case result>0:
+	puts("text2 is early");
+	break;
+	
+	case:result<0
+	puts("text1 is early");	
+	break;
+
+	default:
+	result=time1->tm_min - time2->tm_min;
+	switch(result)
+	{
+		case result>0:
+		puts("text2 is early");
+		break;
+		
+		case:result<0
+		puts("text1 is early");	
+		break;
+	
+		default:
+		puts("same time");
+		break;
+	}
 }
+
