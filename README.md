@@ -16,7 +16,7 @@
 해당프로젝트를 포크해서 진행해주세요.
 포크된 내용은 개인의 repository안의 Assignment2에 저장됩니다.
 ```
-git clone https://github.com/[repository_name].git
+git clone https://github.com/[username]/Assignment2.git
 cd Assignment2
 git checkout -b [branch_name]
 ```
@@ -37,6 +37,16 @@ time compare
 same time
 ```
 
-## 3.참고자료
-[stat(2) manpage](http://man7.org/linux/man-pages/man2/stat.2.html)
-[struct tm](http://www.cplusplus.com/reference/ctime/tm/)
+## 3.upstream 동기화
+```
+git remote add upstream https://github.com/droplet92/Assignment2.git
+git fetch upstream master
+git checkout master
+git merge upstream master
+```
+
+
+## 4.참고자료
+[stat(2) manpage](http://man7.org/linux/man-pages/man2/stat.2.html)  
+[struct tm](http://www.cplusplus.com/reference/ctime/tm/)  
+
