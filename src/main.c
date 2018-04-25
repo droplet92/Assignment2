@@ -82,6 +82,8 @@ void datecmp(void)
 
 	result=time1->tm_mon-time2->tm_mon;
 
+	puts("date compare");
+
 	switch(result)
 	{
 	case result>0:
@@ -105,7 +107,7 @@ void datecmp(void)
 		break;
 	
 		default:
-		puts("same time");
+		puts("same date");
 		break;
 	}
 	}
@@ -117,6 +119,8 @@ void timecmp(void)
 	int result=0;
 
 	result=time1->tm_hour-time2->tm_hour;
+
+	puts("time compare");
 
 	switch(result)
 	{
