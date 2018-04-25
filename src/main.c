@@ -77,77 +77,46 @@ void blockcmp(void)
 //두 개의 파일 수정 날짜를 비교하는 함수 작성
 void datecmp(void)
 {
-	
-	int result=0;
-
-	result=time1->tm_mon-time2->tm_mon;
-
 	puts("date compare");
-
-	switch(result)
-	{
-	case result>0:
-	puts("text2 is early");
-	break;
-	
-	case result<0:
-	puts("text1 is early");	
-	break;
-
-	default:
-	result=time1->tm_mday - time2->tm_mday;
-	switch(result)
-	{
-		case result>0:
+	//month 또는 date가 작을수록 빨리 만들어진 파일 
+	if (time1->tm_mon < time2->tm_mon)
+		puts("text1 is early");
+	else if (time1->tm_mon > time2->tm_mon)
 		puts("text2 is early");
-		break;
-		
-		case result<0:
-		puts("text1 is early");	
-		break;
-	
-		default:
-		puts("same date");
-		break;
+	else
+	{
+		if (time1->tm_mday < time2->tm_mday)
+			puts("text1 is early");
+		else if (time1->tm_mday == time2->tm_mday)
+			puts("same date");
+		else
+			puts("text2 is early");
 	}
-	}
+
 }
 
-//두 개의 파일 수정 시간을 비교하는 함수 작성
+
+	//두 개의 파일 수정 시간 비교하는 함수 작성
 void timecmp(void)
 {
-	int result=0;
-
-	result=time1->tm_hour-time2->tm_hour;
-
 	puts("time compare");
 
-	switch(result)
-	{
-	case result>0:
-	puts("text2 is early");
-	break;
-	
-	case result<0:
-	puts("text1 is early");	
-	break;
-
-	default:
-	result=time1->tm_min - time2->tm_min;
-	switch(result)
-	{
-		case result>0:
+	//hour 또는 min이 작을수록 빨리 만들어진 파일 
+	if (time1->tm_hour < time2->tm_hour)
+		puts("text1 is early");
+	else if (time1->tm_hour > time2->tm_hour)
 		puts("text2 is early");
-		break;
-		
-		case result<0:
-		puts("text1 is early");	
-		break;
+	else
+	{
+		if (time1->tm_min < time2->tm_min)
+			puts("text1 is early");
+		else if (time1->tm_min == time2->tm_min)
+			puts("same time");
+		else
+			puts("text2 is early");
+	}
+
 	
-		default:
-		puts("same time");
-		break;
-	}
-	}
 }
+
 
