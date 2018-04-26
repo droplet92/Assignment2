@@ -51,17 +51,17 @@ void filestat2(void)
 //파일 1의 시간 정보를 가져오는 함수 작성
 void filetime1(void)
 {
-	if(stat1){
-		time1 = stat1.st_mtime;
-	}
+	static struct tm t1;
+	t1 = *(localtime(&stat1.st_mtime));
+	time1 = &t1;
 }
 
 //파일 2의 시간 정보를 가져오는 함수 작성
 void filetime2(void)
 {
-	if(stat2){
-		time2 = stat2.st_mtime;
-	}
+	static struct tm t2;
+	t2 = *(localtime(&stat2.st_mtime));
+	time2 = &t2;
 }
 
 //두 개의 파일 크기를 비교하는 함수 작성
