@@ -51,16 +51,16 @@ void filestat2(void)
 //파일 1의 시간 정보를 가져오는 함수 작성
 void filetime1(void)
 {
-	if(stat1){
-		time1 = stat1.st_mtime;
+	if(fopen("./text1", "r")){
+		time1 = localtime(&stat1.st_mtime);
 	}
 }
 
 //파일 2의 시간 정보를 가져오는 함수 작성
 void filetime2(void)
 {
-	if(stat2){
-		time2 = stat2.st_mtime;
+	if(fopen("./text2", "r")){
+		time2 = localtime(&stat2.st_mtime);
 	}
 }
 
